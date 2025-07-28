@@ -1,8 +1,26 @@
 ---
 import Card from '@/components/Card.astro';
+import CardContent from '@/components/CardContent.astro';
+import CardFooter from '@/components/CardFooter.astro';
+import CardHeader from '@/components/CardHeader.astro';
+import Input from '@components/Input.astro';
 import Layout from '@layouts/Layout.astro';
+import Logo from '@assets/logo.webp'
 ---
 
 <Layout title="Página de inicio">
-	<Card />
+	<Card>
+		<section class="h-1/5 flex items-center">
+      <CardHeader logo={Logo.src} title="Página de inicio" />
+    </section>
+    <section class="h-3/5 flex">
+      <CardContent title="Sistema de Retenciones">
+        <Input id="rif" label="Rif:" placeholder="Ingrese su rif" />
+				<Input id="password" label="Contraseña:" placeholder="Ingrese su contraseña" type="password" />
+      </CardContent>
+    </section>
+    <section class="h-1/5 flex items-center">
+      <CardFooter />
+    </section>
+	</Card>
 </Layout>
