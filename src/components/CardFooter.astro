@@ -8,7 +8,7 @@ interface Props {
 
 const { id, title, action, href } = Astro.props;
 ---
-<div id={id} class="flex text-sm items-center justify-center gap-1 w-full text-gray-400">
+<div id={id} class="flex text-xs items-center justify-center gap-1 w-full text-gray-400">
   <h5>{title}</h5>
   <h5><a class="hover:text-border-hover hover:underline" href={href}>{action}</a></h5>
 </div>
