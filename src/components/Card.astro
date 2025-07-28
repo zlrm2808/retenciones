@@ -1,0 +1,27 @@
+---
+interface Props {
+  title?: string;
+}
+
+import Header from '@components/CardHeader.astro';
+import Content from '@components/CardContent.astro';
+import Footer from '@components/CardFooter.astro';
+import Logo from '@assets/logo.webp'
+import Input from '@components/Input.astro';
+---
+<div class="flex items-center justify-center h-screen">
+  <div class="bg-neutral-50 rounded-lg shadow-lg p-8 max-w-sm w-full h-96">
+    <section class="h-1/5 flex items-center">
+      <Header logo={Logo.src} title="Página de inicio" />
+    </section>
+    <section class="h-3/5 flex">
+      <Content title="Sistema de Retenciones">
+        <Input id="rif" label="RIF" placeholder="Ingrese su RIF" />
+      </Content>
+    </section>
+    <section class="h-1/5 flex items-center">
+      <Footer />
+    </section>
+  </div>
+  </div>
+</div>

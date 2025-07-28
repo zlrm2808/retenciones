@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+@theme {
+  --color-primary: #0B6093;
+  --color-border: #807c7c;
+  --color-border-hover: #0B6093;
+}
