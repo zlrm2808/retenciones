@@ -3,11 +3,12 @@ interface Props {
   id: string;
   label?: string;
   placeholder?: string;
-  type?: string | "text" | "password" | "email" | "number";
+  type?: "text" | "password" | "email" | "number";
+  className?: string;
 }
-const { id, label = "", placeholder = "", type = "text" } = Astro.props as Props;
+const { id, label = "", placeholder = "", type = "text", className="" } = Astro.props as Props;
 ---
 <div class="mt-3 text-sm">
-  <label for={id}>{label}</label>
-  <input id={id} type={type} placeholder={placeholder} class="border-1 border-border rounded-lg p-2 w-full" />
+  <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for={id}>{label}</label>
+  <input id={id} type={type} placeholder={placeholder} autocomplete="off" name={id} class=`mt-2 border-1 bg-background border-border rounded-lg p-2 w-full ${className}  focus:outline-border-hover` />
 </div> 

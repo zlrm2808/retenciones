@@ -1,8 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import "tailwindcss";
 @tailwind utilities;
 
 @theme {
+  --font-inter: "Inter", sans-serif; 
+  --font-roboto: "Roboto", sans-serif; 
   --color-primary: #0B6093;
   --color-border: #807c7c;
-  --color-border-hover: #0B6093;
+  --color-border-hover: #065CC6;
+  --color-background: #F9FAFB;
 }

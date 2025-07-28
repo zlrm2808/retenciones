@@ -1,1 +1,14 @@
-<h1>Footer</h1>
+---
+interface Props {
+  id?: string;
+  title?: string;
+  action?: string;
+  href?: string;
+}
+
+const { id, title, action, href } = Astro.props;
+---
+<div id={id} class="flex text-sm items-center justify-center gap-1 w-full text-gray-400">
+  <h5>{title}</h5>
+  <h5><a class="hover:text-border-hover hover:underline" href={href}>{action}</a></h5>
+</div>

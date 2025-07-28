@@ -1,0 +1,13 @@
+---
+interface Props {
+  id: string;
+  title?: string;
+}
+const { id, title = "Título por defecto" } = Astro.props as Props;
+---
+<div class="flex justify-center mt-3.5 w-full bg-border-hover hover:opacity-80 h-10 rounded-lg">
+  <button id={id} class="flex items-center justify-center gap-2 cursor-pointer w-full text-white hover:text-cyan-500 ">
+    <slot  name="icon" />
+    {title}
+  </button>
+</div>

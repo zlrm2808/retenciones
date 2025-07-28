@@ -6,6 +6,8 @@ import CardHeader from '@/components/CardHeader.astro';
 import Input from '@components/Input.astro';
 import Layout from '@layouts/Layout.astro';
 import Logo from '@assets/logo.webp'
+import Button from '@/components/Button.astro';
+import { Building2, Lock, LogIn } from '@lucide/astro';
 ---
 
 <Layout title="Página de inicio">
@@ -14,13 +16,20 @@ import Logo from '@assets/logo.webp'
       <CardHeader logo={Logo.src} title="Página de inicio" />
     </section>
     <section class="h-3/5 flex">
-      <CardContent title="Sistema de Retenciones">
-        <Input id="rif" label="Rif:" placeholder="Ingrese su rif" />
-				<Input id="password" label="Contraseña:" placeholder="Ingrese su contraseña" type="password" />
+      <CardContent title="Sistema de Retenciones" subtitle='Inicia sesión para consultar tus retenciones'>
+        <div class="relative">
+          <Building2 class="absolute left-3 top-12 size-5 text-muted-foreground text-gray-500" />
+          <Input className="pl-10" id="txtrif" label="Rif:" placeholder="Ingrese su rif" />
+        </div>
+        <div class="relative">
+          <Lock class="absolute left-3 top-12 size-5 text-muted-foreground text-gray-500" />
+          <Input className="pl-10"id="txtcontraseña" label="Contraseña:" placeholder="Ingrese su contraseña" type="password" />
+        </div>
+        <Button id="login" title="Iniciar sesión"><LogIn slot="icon" /></Button>
       </CardContent>
     </section>
     <section class="h-1/5 flex items-center">
-      <CardFooter />
+      <CardFooter id="textFooter" title="¿No tienes cuenta?" action='Regístrate' href='/register' />
     </section>
 	</Card>
 </Layout>
